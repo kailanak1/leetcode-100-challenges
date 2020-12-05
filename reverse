@@ -1,0 +1,24 @@
+var reverse = function(x) {
+      let negative = false 
+   
+    let revNum = 0; 
+   if (Math.sign(x) === -1){
+       x = Math.abs(x)
+       negative = true 
+   }
+    while( x > 0 ){
+        revNum = (revNum * 10) + ( x % 10)
+        x = Math.floor(x/10)
+    }  
+    if ( revNum >= -2147483647 && revNum <= 2147483647 ){
+ 
+    if (negative === true){
+      return `-${revNum}`
+    } else{
+
+   return revNum
+   }
+    } else {
+      return 0 
+    }
+};
